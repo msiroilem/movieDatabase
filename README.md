@@ -4,7 +4,7 @@
 
 ### By: Tyler Jones
 
-#### [GitHub](https://github.com/msiroilem) | [LinkedIn](https://www.linkedin.com/in/tylerwadejones/) | [Trello](https://trello.com/b/CKbOdGv7/movie-database)
+#### [GitHub](https://github.com/msiroilem) | [LinkedIn](https://www.linkedin.com/in/tylerwadejones/) | [Trello](https://trello.com/b/eb6pO1Wn/movie-database)
 
 ### Description
 
@@ -32,3 +32,6 @@
 ---
 
 ### **_Credits_**
+
+MDN
+W3Schools
