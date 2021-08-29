@@ -4,17 +4,17 @@
 
 </br>
 
-### By: Tyler Jones
+## By: Tyler Jones
 
 </br>
 
-#### [GitHub](https://github.com/msiroilem) | [LinkedIn](https://www.linkedin.com/in/tylerwadejones/) | [Trello](https://trello.com/b/eb6pO1Wn/movie-database)
+### [GitHub](https://github.com/msiroilem) | [LinkedIn](https://www.linkedin.com/in/tylerwadejones/) | [Trello](https://trello.com/b/eb6pO1Wn/movie-database)
 
 </br>
 
 ### Description
 
-#### This is a movie database where you can add, find and delete movies.
+This is a database where you can add, search for and delete movies as well as add and delete reviews to those movies.
 
 <br>
 
@@ -53,12 +53,24 @@ Then, move into the movieDatabase project with:
 
 </br>
 
+To be added later...
+
+</br>
+
 ### Component Hierarchy Diagram
 
+</br>
+<img src="https://i.ibb.co/LPfmNh7/Screen-Shot-2021-08-28-at-11-27-00-PM.png"/>
+
+</br>
 </br>
 
 ### Entity Relationship Diagram
 
+</br>
+<img src="https://i.ibb.co/X2J5wLM/Screen-Shot-2021-08-28-at-11-37-13-PM.png"/>
+
+</br>
 </br>
 
 ### _Future Updates_
