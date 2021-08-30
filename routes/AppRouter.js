@@ -5,6 +5,7 @@ const AppRouter = Router()
 
 AppRouter.get('/', (req, res) => res.send('Success!'))
 AppRouter.get('/movies', MovieController.getAllMovies)
+AppRouter.get('/movies/:id', MovieController.getMovieById)
 AppRouter.post('/movies', MovieController.createNewMovie)
 AppRouter.delete('/movies', MovieController.deleteMovie)
 AppRouter.post('/reviews', ReviewController.createNewReview)
