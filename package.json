@@ -7,6 +7,26 @@
     "express": "^4.17.1",
     "mongoose": "^6.0.2",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.12",
     "react-router-dom": "^5.2.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "moviedatabase",
+  "description": "## Date 9/3/2021",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msiroilem/movieDatabase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msiroilem/movieDatabase/issues"
+  },
+  "homepage": "https://github.com/msiroilem/movieDatabase#readme"
 }

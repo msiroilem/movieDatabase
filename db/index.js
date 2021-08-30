@@ -4,7 +4,8 @@ const mongoose = require('mongoose')
 let MONGODB_URI = ''
 
 if (
-  TODO // info here with process.env ask questions about this part
+  process.env.NODE_ENV === 'production' ||
+  process.env.NODE_ENV === 'localserver-productiondb'
 ) {
   MONGODB_URI = process.env.MONGODB_URI
 } else {
