@@ -57,22 +57,6 @@ To be added later...
 
 </br>
 
-### Component Hierarchy Diagram
-
-</br>
-<img src="https://i.ibb.co/LPfmNh7/Screen-Shot-2021-08-28-at-11-27-00-PM.png"/>
-
-</br>
-</br>
-
-### Entity Relationship Diagram
-
-</br>
-<img src="https://i.ibb.co/X2J5wLM/Screen-Shot-2021-08-28-at-11-37-13-PM.png"/>
-
-</br>
-</br>
-
 ### _Future Updates_
 
 [ ] Implement TMDB API
