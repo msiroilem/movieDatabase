@@ -51,7 +51,7 @@ const updateReview = async (req, res) => {
       id,
       req.body,
       { new: true },
-      (err, movie) => {
+      (err, review) => {
         if (err) {
           res.status(500).send(err)
         }
