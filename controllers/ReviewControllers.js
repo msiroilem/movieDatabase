@@ -44,9 +44,32 @@ const deleteReview = async (req, res) => {
   }
 }
 
+const updateReview = async (req, res) => {
+  try {
+    const { id } = req.params
+    await Review.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true },
+      (err, movie) => {
+        if (err) {
+          res.status(500).send(err)
+        }
+        if (!review) {
+          res.status(500).send('Review not found!')
+        }
+        return res.status(200).json(review)
+      }
+    )
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getAllReviews,
   getReviewById,
   createNewReview,
-  deleteReview
+  deleteReview,
+  updateReview
 }
