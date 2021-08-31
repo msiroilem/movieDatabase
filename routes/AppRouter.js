@@ -9,7 +9,6 @@ AppRouter.get('/movies/:id', MovieController.getMovieById)
 
 AppRouter.post('/movies', MovieController.createNewMovie)
 AppRouter.delete('/movies/:id', MovieController.deleteMovie)
-AppRouter.put('/movies/:id', MovieController.updateMovie)
 
 AppRouter.get('/reviews', ReviewController.getAllReviews)
 AppRouter.get('/reviews/:id', ReviewController.getReviewById)

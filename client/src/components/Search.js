@@ -1,9 +1,16 @@
 import React from 'react'
 
-export default function Search() {
+export default function Search({ onSubmit, onChange, value }) {
   return (
-    <div>
-      <div></div>
-    </div>
+    <form onSubmit={(e) => onsubmit(e)}>
+      <input
+        type="text"
+        name="search"
+        value={value}
+        placeholder="Search Movies"
+        onChange={(e) => onchange(e)}
+      ></input>
+      <button type="submit">Search</button>
+    </form>
   )
 }

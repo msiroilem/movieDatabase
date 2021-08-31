@@ -31,6 +31,7 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Home>
+              <Search />
               <MovieCard />
             </Home>
           </Route>
