@@ -11,6 +11,6 @@ AppRouter.delete('/movies/:id', MovieController.deleteMovie)
 AppRouter.get('/reviews', ReviewController.getAllReviews)
 AppRouter.get('/reviews/:id', ReviewController.getReviewById)
 AppRouter.post('/reviews', ReviewController.createNewReview)
-AppRouter.delete('/reviews', ReviewController.deleteReview)
+AppRouter.delete('/reviews/:id', ReviewController.deleteReview)
 
 module.exports = AppRouter
