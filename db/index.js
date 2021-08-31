@@ -1,4 +1,3 @@
-const { POINT_CONVERSION_COMPRESSED } = require('constants')
 const mongoose = require('mongoose')
 
 let MONGODB_URI = ''

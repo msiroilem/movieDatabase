@@ -24,7 +24,26 @@ export default function App() {
 
   return (
     <div className="App">
-      <header className="App-header">Hi!</header>
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/movies">
+            <CreateMovie movies={movies} setMovies={setMovies} />
+          </Route>
+        </Switch>
+      </main>
+      <footer>
+        <Switch>
+          <Route exact path="./about">
+            <About />
+          </Route>
+        </Switch>
+      </footer>
     </div>
   )
 }
