@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import { Route, Switch } from 'react-router'
-import './index.css'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 
