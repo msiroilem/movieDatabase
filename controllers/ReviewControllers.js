@@ -1,6 +1,26 @@
-const { resolveSoa } = require('dns')
 const { Review } = require('../models')
 
+const getAllReviews = async (req, res) => {
+  try {
+    const reviews = await Review.find()
+    return res.status(200).json({ reviews })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const getReviewById = async (req, res) => {
+  try {
+    const { id } = req.params
+    const review = await Review.findById(id)
+    if (review) {
+      return res.status(200).json({ review })
+    }
+    return res.status(404).send('Specified review does not exist.')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
 const createNewReview = async (req, res) => {
   try {
     const results = await new Review(req.body)
@@ -25,6 +45,8 @@ const deleteReview = async (req, res) => {
 }
 
 module.exports = {
+  getAllReviews,
+  getReviewById,
   createNewReview,
   deleteReview
 }

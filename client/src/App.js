@@ -30,7 +30,9 @@ export default function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home>
+              <MovieCard />
+            </Home>
           </Route>
           <Route exact path="/movies">
             <CreateMovie movies={movies} setMovies={setMovies} />
