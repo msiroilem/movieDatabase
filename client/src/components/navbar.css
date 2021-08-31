@@ -7,4 +7,6 @@
   top: 0;
   align-items: center;
   list-style: none;
+  margin: 5px;
+  text-decoration: none;
 }
