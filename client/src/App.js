@@ -43,10 +43,11 @@ export default function App() {
       </header>
       <main>
         <Switch>
+          <Route exact path="/search">
+            <Search />
+          </Route>
           <Route exact path="/">
-            <Home>
-              <Review />
-            </Home>
+            <Home></Home>
           </Route>
           <Route exact path="/movies">
             <CreateMovie />

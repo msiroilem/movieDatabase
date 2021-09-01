@@ -7,9 +7,5 @@ export default function Home() {
 
   const getSearchResults = async () => {}
 
-  return (
-    <div>
-      <Search />
-    </div>
-  )
+  return <div></div>
 }
