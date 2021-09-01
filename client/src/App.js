@@ -17,6 +17,7 @@ export default function App() {
 
   useEffect(() => {
     getMovies()
+    console.log('string here', movies)
   }, [])
 
   const getMovies = async () => {
@@ -54,6 +55,7 @@ export default function App() {
             {movies.map((movie) => (
               <MovieCard key={movie.id} title={movie.title} />
             ))}
+            <button>Delete Movie</button>
           </Route>
           <Route exact path="/about">
             <About />

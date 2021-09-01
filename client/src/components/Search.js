@@ -14,6 +14,11 @@ export default function Search({ onSubmit, onChange, value }) {
     toggleSearched(true)
   }
 
+  const handleChange = async (event) => {
+    setSearchQuery(event.target.value)
+    console.log('event.target.value', event.target.value)
+  }
+
   return (
     <form onSubmit={(e) => onSubmit(e)}>
       <input
