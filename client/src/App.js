@@ -8,7 +8,6 @@ import Home from './components/Home'
 import MovieCard from './components/MovieCard'
 import NavBar from './components/NavBar'
 import Review from './components/Review'
-import Search from './components/Search'
 import { BASE_URL } from './globals'
 
 export default function App() {
@@ -16,12 +15,19 @@ export default function App() {
   const [deleteMovies, setDeleteMovies] = useState([])
 
   useEffect(() => {
-    async function getMovie() {
-      const res = await axios.get(`${BASE_URL}/movies`)
-      setMovies(res.data.results)
-    }
-    getMovie()
+    getMovies()
+    console.log('string here', movies)
   }, [])
+
+  const getMovies = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/movies`)
+
+      setMovies(res.data.movies)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   // useEffect(() => {TODO
   //   async function deleteMovie() {
@@ -33,18 +39,20 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        <Search />
         <NavBar />
       </header>
       <main>
         <Switch>
           <Route exact path="/">
             <Home>
-              <MovieCard />
+              <Review />
             </Home>
           </Route>
           <Route exact path="/movies">
-            <CreateMovie movies={movies} setMovies={setMovies} />
+            <CreateMovie />
+            {movies.map((movie) => (
+              <MovieCard key={movie.id} title={movie.title} />
+            ))}
           </Route>
         </Switch>
       </main>
