@@ -1,9 +1,21 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { BASE_URL } from '../globals'
 
 export default function Search({ onSubmit, onChange, value }) {
-  // const []
+  const [searchResults, setSearchResults] = useState([])
+  const [searched, toggleSearched] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const getSearchResults = async (e) => {
+    e.preventDefault()
+    const res = await axios.get(`${BASE_URL}/movies`)
+    setSearchResults()
+    toggleSearched(true)
+  }
+
   return (
-    <form onSubmit={(e) => onsubmit(e)}>
+    <form onSubmit={(e) => onSubmit(e)}>
       <input
         type="text"
         name="search"

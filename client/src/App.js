@@ -8,6 +8,7 @@ import Home from './components/Home'
 import MovieCard from './components/MovieCard'
 import NavBar from './components/NavBar'
 import Review from './components/Review'
+import Search from './components/Search'
 import { BASE_URL } from './globals'
 
 export default function App() {
