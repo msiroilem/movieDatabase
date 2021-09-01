@@ -7,6 +7,7 @@ export default function NavBar() {
     <div className="container">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/movies">Create New Movie</NavLink>
+      <NavLink to="/about">About</NavLink>
     </div>
   )
 }
