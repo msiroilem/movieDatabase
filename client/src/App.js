@@ -13,6 +13,7 @@ import { BASE_URL } from './globals'
 
 export default function App() {
   const [movies, setMovies] = useState([])
+  const [deleteMovies, setDeleteMovies] = useState([])
 
   useEffect(() => {
     async function getMovie() {
@@ -22,9 +23,17 @@ export default function App() {
     getMovie()
   }, [])
 
+  // useEffect(() => {TODO
+  //   async function deleteMovie() {
+  //     const res = await axios.delete(`${BASE_URL}/movies`)
+  //   }
+  //   deleteMovie()
+  // }, [])
+
   return (
     <div className="App">
       <header>
+        <Search />
         <NavBar />
       </header>
       <main>

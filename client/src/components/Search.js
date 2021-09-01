@@ -8,7 +8,7 @@ export default function Search({ onSubmit, onChange, value }) {
         name="search"
         value={value}
         placeholder="Search Movies"
-        onChange={(e) => onchange(e)}
+        // onChange={(e) => onchange(e)}
       ></input>
       <button type="submit">Search</button>
     </form>
