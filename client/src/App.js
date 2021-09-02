@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 import About from './components/About'
 import CreateMovie from './components/CreateMovie'
+import CreateReview from './components/CreateReview'
 import Home from './components/Home'
 import MovieCard from './components/MovieCard'
 import NavBar from './components/NavBar'
@@ -14,10 +15,15 @@ import { BASE_URL } from './globals'
 export default function App() {
   const [movies, setMovies] = useState([])
   const [deleteMovies, setDeleteMovies] = useState([])
+  const [reviews, setReviews] = useState([])
 
   useEffect(() => {
     getMovies()
     console.log('string here', movies)
+  }, [])
+
+  useEffect(() => {
+    getReviews()
   }, [])
 
   const getMovies = async () => {
@@ -25,6 +31,16 @@ export default function App() {
       const res = await axios.get(`${BASE_URL}/movies`)
 
       setMovies(res.data.movies)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const getReviews = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/reviews`)
+
+      setReviews(res.data.reviews)
     } catch (error) {
       console.log(error)
     }
@@ -56,18 +72,17 @@ export default function App() {
               <MovieCard key={movie._id} id={movie._id} title={movie.title} />
             ))}
           </Route>
+          <Route exact path="/reviews">
+            <CreateReview />
+            {reviews.map((review) => (
+              <Review key={review._id} id={review._id} title={review.title} />
+            ))}
+          </Route>
           <Route exact path="/about">
             <About />
           </Route>
         </Switch>
       </main>
-      <footer>
-        <Switch>
-          <Route exact path="./about">
-            <About />
-          </Route>
-        </Switch>
-      </footer>
     </div>
   )
 }
