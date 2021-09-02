@@ -7,13 +7,11 @@ export default function CreateMovie(props) {
   const history = useHistory()
 
   const [movieTitle, setMovieTitle] = useState('')
-  const [movieContent, setMovieContent] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const newMovieData = {
-      title: movieTitle,
-      content: movieContent
+      title: movieTitle
     }
     axios
       .post(`${BASE_URL}/movies`, newMovieData)

@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <div className="container">
       <NavLink to="/search">Search</NavLink>
-      {/* <NavLink to="/">Home</NavLink>s */}
+      <NavLink to="/">Home</NavLink>
       <NavLink to="/movies">Movies</NavLink>
       <NavLink to="/reviews">Reviews</NavLink>
       <NavLink to="/about">About</NavLink>

@@ -7,12 +7,11 @@ export default function CreateReview(props) {
   const history = useHistory()
 
   const [reviewTitle, setReviewTitle] = useState('')
-  const [reviewContent, setMovieContent] = useState('')
+  const [reviewContent, setReviewContent] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const newReviewData = {
-      title: reviewTitle,
       content: reviewContent
     }
     axios
@@ -30,11 +29,11 @@ export default function CreateReview(props) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input
+        <textarea
           type="text"
-          placeholder="Movie Title"
-          onChange={(e) => setReviewTitle(e.target.value)}
-        ></input>
+          placeholder="Review Content"
+          onChange={(e) => setReviewContent(e.target.value)}
+        ></textarea>
 
         <button type="submit">Submit</button>
       </form>

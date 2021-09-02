@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+h1 {
+  text-align: center;
+}
 
 .App-logo {
   height: 40vmin;
@@ -43,4 +46,7 @@ a {
 }
 body {
   background-color: gray;
+}
+.container {
+  margin: 50px;
 }

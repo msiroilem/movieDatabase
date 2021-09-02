@@ -14,12 +14,10 @@ import { BASE_URL } from './globals'
 
 export default function App() {
   const [movies, setMovies] = useState([])
-  const [deleteMovies, setDeleteMovies] = useState([])
   const [reviews, setReviews] = useState([])
 
   useEffect(() => {
     getMovies()
-    console.log('string here', movies)
   }, [])
 
   useEffect(() => {
@@ -46,17 +44,11 @@ export default function App() {
     }
   }
 
-  // useEffect(() => {TODO
-  //   async function deleteMovie() {
-  //     const res = await axios.delete(`${BASE_URL}/movies`)
-  //   }
-  //   deleteMovie()
-  // }, [])
-
   return (
     <div className="App">
       <header>
         <NavBar />
+        <h1>Tyler's Movie Database</h1>
       </header>
       <main>
         <Switch>
@@ -75,7 +67,11 @@ export default function App() {
           <Route exact path="/reviews">
             <CreateReview />
             {reviews.map((review) => (
-              <Review key={review._id} id={review._id} title={review.title} />
+              <Review
+                key={review._id}
+                id={review._id}
+                content={review.content}
+              />
             ))}
           </Route>
           <Route exact path="/about">
