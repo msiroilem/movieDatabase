@@ -7,7 +7,7 @@ export default function MovieCard(props) {
     const res = await axios
       .delete(`${BASE_URL}/movies/${id}`)
       .then((res) => console.log(res.data))
-    // window.location.reload()
+    window.location.reload()
   }
 
   return (
