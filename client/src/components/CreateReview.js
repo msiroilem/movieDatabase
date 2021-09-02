@@ -27,9 +27,12 @@ export default function CreateReview(props) {
   }
 
   return (
-    <div>
+    //Stack Overflow helped with making textarea element field bigger with 'cols' and 'rows'
+    <div className="grid">
       <form onSubmit={handleSubmit}>
         <textarea
+          cols="30"
+          rows="10"
           type="text"
           placeholder="Review Content"
           onChange={(e) => setReviewContent(e.target.value)}

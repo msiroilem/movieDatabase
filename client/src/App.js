@@ -56,12 +56,17 @@ export default function App() {
             <Search />
           </Route>
           <Route exact path="/">
-            <Home></Home>
+            <Home />
           </Route>
           <Route exact path="/movies">
             <CreateMovie />
             {movies.map((movie) => (
-              <MovieCard key={movie._id} id={movie._id} title={movie.title} />
+              <MovieCard
+                key={movie._id}
+                id={movie._id}
+                title={movie.title}
+                image={movie.image}
+              />
             ))}
           </Route>
           <Route exact path="/reviews">

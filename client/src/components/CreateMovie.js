@@ -7,17 +7,20 @@ export default function CreateMovie(props) {
   const history = useHistory()
 
   const [movieTitle, setMovieTitle] = useState('')
+  const [movieImage, setMovieImage] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const newMovieData = {
-      title: movieTitle
+      title: movieTitle,
+      image: movieImage
     }
     axios
       .post(`${BASE_URL}/movies`, newMovieData)
       .then(function (response) {
         const newMovie = response.data.results
         props.setMovieTitle([newMovie, ...props.movies])
+        props.setMovieImage([newMovie, ...props.image])
         history.push('/')
       })
       .catch(function (error) {
@@ -26,14 +29,13 @@ export default function CreateMovie(props) {
   }
 
   return (
-    <div>
+    <div className="grid">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Movie Title"
           onChange={(e) => setMovieTitle(e.target.value)}
         ></input>
-
         <button type="submit">Submit</button>
       </form>
     </div>
