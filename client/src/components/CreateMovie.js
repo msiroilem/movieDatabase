@@ -36,6 +36,11 @@ export default function CreateMovie(props) {
           placeholder="Movie Title"
           onChange={(e) => setMovieTitle(e.target.value)}
         ></input>
+        <input
+          type="url"
+          placeholder="Movie Image"
+          onChange={(e) => setMovieImage(e.target.value)}
+        ></input>
         <button type="submit">Submit</button>
       </form>
     </div>

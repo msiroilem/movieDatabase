@@ -24,9 +24,10 @@ export default function App() {
     getReviews()
   }, [])
 
-  const getMovies = async () => {
+  const getMovies = async (id) => {
+    //TODO {id} in ln 30 needs to be set up differently in order to find movie in database on frontend
     try {
-      const res = await axios.get(`${BASE_URL}/movies`)
+      const res = await axios.get(`${BASE_URL}/movies/${id}`)
 
       setMovies(res.data.movies)
     } catch (error) {
@@ -79,9 +80,11 @@ export default function App() {
               />
             ))}
           </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
+          <footer>
+            <Route exact path="/about">
+              <About />
+            </Route>
+          </footer>
         </Switch>
       </main>
     </div>
