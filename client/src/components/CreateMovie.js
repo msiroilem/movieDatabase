@@ -35,11 +35,7 @@ export default function CreateMovie(props) {
           placeholder="Movie Title"
           onChange={(e) => setMovieTitle(e.target.value)}
         ></input>
-        <input
-          type="text"
-          placeholder="Your content here"
-          onChange={(e) => setMovieContent(e.target.value)}
-        ></input>
+
         <button type="submit">Submit</button>
       </form>
     </div>

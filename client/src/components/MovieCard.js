@@ -10,6 +10,11 @@ export default function MovieCard(props) {
     window.location.reload()
   }
 
+  const addMovie = async (id) => {
+    const res = await axios.post(`${BASE_URL}/movies`)
+    window.location.reload()
+  }
+
   return (
     <div onClick={props.onClick}>
       {props.title}

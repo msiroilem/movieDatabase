@@ -55,7 +55,6 @@ export default function App() {
             {movies.map((movie) => (
               <MovieCard key={movie._id} id={movie._id} title={movie.title} />
             ))}
-            <button>Delete Movie</button>
           </Route>
           <Route exact path="/about">
             <About />
