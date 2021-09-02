@@ -27,7 +27,7 @@ export default function App() {
   const getMovies = async (id) => {
     //TODO {id} in ln 30 needs to be set up differently in order to find movie in database on frontend
     try {
-      const res = await axios.get(`${BASE_URL}/movies/${id}`)
+      const res = await axios.get(`${BASE_URL}/movies/`)
 
       setMovies(res.data.movies)
     } catch (error) {
