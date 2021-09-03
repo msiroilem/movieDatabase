@@ -1,8 +1,14 @@
 .App {
   text-align: center;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+}
 h1 {
   text-align: center;
+  color: black;
 }
 
 .App-logo {

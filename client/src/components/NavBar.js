@@ -5,12 +5,22 @@ import '../components/navbar.css'
 export default function NavBar() {
   return (
     <div className="container">
-      <NavLink to="/search">Search</NavLink>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/movies">Movies</NavLink>
-      <NavLink to="/reviews">Reviews</NavLink>
+      <NavLink className="nav-link" to="/search">
+        Search
+      </NavLink>
+      <NavLink className="nav-link" to="/">
+        Home
+      </NavLink>
+      <NavLink className="nav-link" to="/movies">
+        Movies
+      </NavLink>
+      <NavLink className="nav-link" to="/reviews">
+        Reviews
+      </NavLink>
       <footer>
-        <NavLink to="/about">About</NavLink>
+        <NavLink className="nav-link" to="/about">
+          About
+        </NavLink>
       </footer>
     </div>
   )

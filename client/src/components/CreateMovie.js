@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router'
 import { BASE_URL } from '../globals'
+import './CreateMovie.css'
 
 export default function CreateMovie(props) {
   const history = useHistory()
@@ -20,7 +21,6 @@ export default function CreateMovie(props) {
       .then(function (response) {
         const newMovie = response.data.results
         props.setMovieTitle([newMovie, ...props.movies])
-        props.setMovieImage([newMovie, ...props.image])
         history.push('/')
         window.location.reload()
       })
@@ -30,20 +30,18 @@ export default function CreateMovie(props) {
   }
 
   return (
-    <div className="grid">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Movie Title"
-          onChange={(e) => setMovieTitle(e.target.value)}
-        ></input>
-        <input
-          type="url"
-          placeholder="Movie Image"
-          onChange={(e) => setMovieImage(e.target.value)}
-        ></input>
-        <button type="submit">Submit</button>
-      </form>
+    <div>
+      <div className="grid">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Movie Title"
+            className="movie-title"
+            onChange={(e) => setMovieTitle(e.target.value)}
+          ></input>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   )
 }
