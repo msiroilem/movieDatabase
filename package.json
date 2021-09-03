@@ -8,7 +8,8 @@
     "morgan": "^1.10.0",
     "mpath": "^0.8.3",
     "react-rainbow-components": "^1.26.0",
-    "react-router-dom": "^5.2.1"
+    "react-router-dom": "^5.2.1",
+    "xlsx": "^0.17.0"
   },
   "scripts": {
     "start": "node server.js",
