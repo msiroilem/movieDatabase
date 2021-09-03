@@ -17,11 +17,6 @@ export default function NavBar() {
       <NavLink className="nav-link" to="/reviews">
         Reviews
       </NavLink>
-      <footer>
-        <NavLink className="nav-link" to="/about">
-          About
-        </NavLink>
-      </footer>
     </div>
   )
 }

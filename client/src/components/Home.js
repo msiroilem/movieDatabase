@@ -1,5 +1,10 @@
 import React from 'react'
 
 export default function Home() {
-  return <div></div>
+  return (
+    <section>
+      <p>Welcome!</p>
+      <p>To!</p>
+    </section>
+  )
 }

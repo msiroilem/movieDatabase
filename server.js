@@ -3,6 +3,7 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const dotenv = require('dotenv')
+const path = require('path')
 dotenv.config()
 const db = require('./db')
 const AppRouter = require('./routes/AppRouter')
@@ -18,12 +19,12 @@ app.use(logger('dev'))
 
 app.use('/api', AppRouter)
 
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.join(__dirname, 'client/build')))
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.join(`${__dirname}/client/build/index.html`))
-//   })
-// }
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')))
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(`${__dirname}/client/build/index.html`))
+  })
+}
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

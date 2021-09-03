@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 import { Route, Switch } from 'react-router-dom'
 import axios from 'axios'
-import About from './components/About'
+
 import CreateMovie from './components/CreateMovie'
 import CreateReview from './components/CreateReview'
 import Home from './components/Home'
@@ -75,6 +75,7 @@ export default function App() {
           <Route exact path="/search">
             <div>
               <Search findMovie={(title) => findMovie(title)} />
+
               {movieFound ? (
                 <MovieCard
                   deleteMovie={deleteMovie}
@@ -113,11 +114,6 @@ export default function App() {
               />
             ))}
           </Route>
-          <footer>
-            <Route exact path="/about">
-              <About />
-            </Route>
-          </footer>
         </Switch>
       </main>
     </div>

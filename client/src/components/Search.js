@@ -8,7 +8,7 @@ export default function Search({ findMovie }) {
     findMovie(value)
   }
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form className="search" onSubmit={(e) => handleSubmit(e)}>
       <input
         type="text"
         name="search"
