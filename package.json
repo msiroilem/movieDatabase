@@ -15,7 +15,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "cd client && rm -rf build && np install && npm run build"
+    "build": "cd client && rm -rf build && npm install && npm run build"
   },
   "name": "moviedatabase",
   "description": "## Date 9/3/2021",
