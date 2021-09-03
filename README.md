@@ -57,8 +57,6 @@ Then, move into the movieDatabase project with:
 
 </br>
 
-To be added later...
-
 </br>
 
 ### _Future Updates_
