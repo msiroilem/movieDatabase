@@ -14,7 +14,7 @@
 
 ### Description
 
-This is a database where you can add, search for and delete movies as well as add and delete reviews to those movies.
+This is a database where you can add, search for and delete movies as well as add and delete reviews.
 
 <br>
 
@@ -51,6 +51,10 @@ Then, move into the movieDatabase project with:
 
 ### **_Screenshots_**
 
+![Movie Database](https://i.ibb.co/dQ3Z484/Screen-Shot-2021-09-03-at-9-55-02-AM.png)
+
+![Search](https://i.ibb.co/zmTb7ts/Screen-Shot-2021-09-03-at-10-00-58-AM.png)
+
 </br>
 
 To be added later...
@@ -63,7 +67,7 @@ To be added later...
 
 [ ] Ability to rate movies
 
----
+[ ] Reviews linked to Movies
 
 ### **_Credits_**
 
