@@ -15,6 +15,7 @@ import { BASE_URL } from './globals'
 export default function App() {
   const [movies, setMovies] = useState([])
   const [reviews, setReviews] = useState([])
+  const [movieFound, setMovieFound] = useState(null)
 
   useEffect(() => {
     getMovies()
@@ -24,11 +25,19 @@ export default function App() {
     getReviews()
   }, [])
 
-  const getMovies = async (id) => {
-    //TODO {id} in ln 30 needs to be set up differently in order to find movie in database on frontend
+  const findMovie = (title) => {
+    const foundMovie = movies.find((movie) => movie.title === title)
+    if (foundMovie) {
+      setMovieFound(foundMovie)
+    } else {
+      setMovieFound(null)
+    }
+  }
+
+  const getMovies = async () => {
     try {
       const res = await axios.get(`${BASE_URL}/movies/`)
-
+      console.log(res.data.movies)
       setMovies(res.data.movies)
     } catch (error) {
       console.log(error)
@@ -45,6 +54,16 @@ export default function App() {
     }
   }
 
+  const deleteMovie = async (id) => {
+    try {
+      const res = await axios.delete(`${BASE_URL}/movies/${id}`)
+      console.log(res)
+      setMovies(movies.filter((movie) => movie._id !== id))
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div className="App">
       <header>
@@ -54,7 +73,20 @@ export default function App() {
       <main>
         <Switch>
           <Route exact path="/search">
-            <Search />
+            <div>
+              <Search findMovie={(title) => findMovie(title)} />
+              {movieFound ? (
+                <MovieCard
+                  deleteMovie={deleteMovie}
+                  key={movieFound._id}
+                  id={movieFound._id}
+                  title={movieFound.title}
+                  image={movieFound.image}
+                />
+              ) : (
+                <div>Movie not found</div>
+              )}
+            </div>
           </Route>
           <Route exact path="/">
             <Home />
@@ -63,6 +95,7 @@ export default function App() {
             <CreateMovie />
             {movies.map((movie) => (
               <MovieCard
+                deleteMovie={deleteMovie}
                 key={movie._id}
                 id={movie._id}
                 title={movie.title}

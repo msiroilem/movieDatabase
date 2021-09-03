@@ -22,6 +22,7 @@ export default function CreateMovie(props) {
         props.setMovieTitle([newMovie, ...props.movies])
         props.setMovieImage([newMovie, ...props.image])
         history.push('/')
+        window.location.reload()
       })
       .catch(function (error) {
         console.log(error)

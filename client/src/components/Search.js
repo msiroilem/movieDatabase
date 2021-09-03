@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function Search({ onSubmit, onChange, value }) {
+export default function Search({ findMovie }) {
+  const [value, setValue] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    findMovie(value)
+  }
   return (
-    <form onSubmit={(e) => onsubmit(e)}>
+    <form onSubmit={(e) => handleSubmit(e)}>
       <input
         type="text"
         name="search"
-        value={value}
         placeholder="Search Movies"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
       ></input>
       <button type="submit">Search</button>
     </form>

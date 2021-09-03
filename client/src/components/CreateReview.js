@@ -6,7 +6,6 @@ import { BASE_URL } from '../globals'
 export default function CreateReview(props) {
   const history = useHistory()
 
-  const [reviewTitle, setReviewTitle] = useState('')
   const [reviewContent, setReviewContent] = useState('')
 
   const handleSubmit = (e) => {

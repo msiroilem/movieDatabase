@@ -7,6 +7,7 @@
     "mongoose": "^5.13.8",
     "morgan": "^1.10.0",
     "mpath": "^0.8.3",
+    "react-rainbow-components": "^1.26.0",
     "react-router-dom": "^5.2.1"
   },
   "scripts": {
