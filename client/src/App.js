@@ -72,25 +72,25 @@ export default function App() {
       </header>
       <main>
         <Switch>
-          <Route exact path="/search">
-            <div>
-              <Search findMovie={(title) => findMovie(title)} />
-
-              {movieFound ? (
-                <MovieCard
-                  deleteMovie={deleteMovie}
-                  key={movieFound._id}
-                  id={movieFound._id}
-                  title={movieFound.title}
-                  image={movieFound.image}
-                />
-              ) : (
-                <div>Movie not found</div>
-              )}
-            </div>
-          </Route>
+          <Route exact path="/search"></Route>
           <Route exact path="/">
-            <Home />
+            <Home>
+              <div>
+                <Search findMovie={(title) => findMovie(title)} />
+
+                {movieFound ? (
+                  <MovieCard
+                    deleteMovie={deleteMovie}
+                    key={movieFound._id}
+                    id={movieFound._id}
+                    title={movieFound.title}
+                    image={movieFound.image}
+                  />
+                ) : (
+                  <div>Movie not found</div>
+                )}
+              </div>
+            </Home>
           </Route>
           <Route exact path="/movies">
             <CreateMovie />
